@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio de Diseño Editorial: La Guía Definitiva</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Lora (Serif) & Inter (Sans-Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Estilo base para la fuente y la paleta de colores */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; 
+            color: #111827;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Lora', serif;
+        }
+        /* Clases personalizadas para la estética */
+        .bg-dark { background-color: #111827; }
+        .bg-light { background-color: #f9fafb; }
+        .text-dark { color: #111827; }
+        .text-medium { color: #6b7280; }
+        .text-light { color: #f9fafb; }
+        .border-light { border-color: #e5e7eb; }
+        
+        /* Estilos para la barra de navegación activa */
+        .nav-link.active {
+            color: #111827;
+            font-weight: 600;
+        }
+        .nav-link.active::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #111827;
+            margin-top: 2px;
+            transition: width 0.3s;
+        }
+        
+        /* Estilos para los botones de los ejercicios */
+        .lab-btn.correct { background-color: #16a34a; color: white; border-color: #16a34a; }
+        .lab-btn.incorrect { background-color: #dc2626; color: white; border-color: #dc2626; }
+        .micro-text span {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .micro-text span:hover {
+            background-color: rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ========== HEADER / NAVEGACIÓN FIJA ========== -->
+    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-light">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex items-center justify-between">
+                <a href="#" class="font-serif text-xl font-bold tracking-tight text-dark">Editorial Lab</a>
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#philosophy" class="nav-link text-medium hover:text-dark transition-colors duration-300">Filosofía</a>
+                    <a href="#fundamentals" class="nav-link text-medium hover:text-dark transition-colors duration-300">Fundamentos</a>
+                    <a href="#process" class="nav-link text-medium hover:text-dark transition-colors duration-300">Proceso</a>
+                    <a href="#practice" class="nav-link text-medium hover:text-dark transition-colors duration-300">Laboratorio</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== SECCIÓN HERO ========== -->
+        <section class="py-24 sm:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-dark leading-tight">
+                            El Arquitecto de la Página
+                        </h1>
+                        <p class="mt-6 text-lg text-medium">
+                            El diseño editorial es el arte de la estructura y la narrativa visual. Aprende a dominar la retícula, la tipografía y la composición para crear publicaciones que informan, cautivan y perduran.
+                        </p>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x600/e5e7eb/111827?text=Diseño+Editorial'" alt="Páginas de una revista de diseño con una composición audaz" class="rounded-lg shadow-2xl w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========== MÓDULO 0: FILOSOFÍA EDITORIAL ========== -->
+        <section id="philosophy" class="py-20 sm:py-24 bg-light border-y border-light">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 data-aos="fade-up" class="text-4xl font-bold tracking-tight font-serif">Filosofía Editorial</h2>
+                    <p data-aos="fade-up" data-aos-delay="100" class="mt-3 text-lg text-medium max-w-3xl mx-auto">Más allá de la estética, el diseño editorial es una disciplina de comunicación, estructura y experiencia.</p>
+                </div>
+                <div class="space-y-16">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div data-aos="fade-right">
+                            <h3 class="font-serif text-3xl font-semibold mb-4">El Diseñador como Curador</h3>
+                            <p class="text-medium">El diseñador editorial no es un mero decorador de páginas. Es un curador de contenido, un arquitecto de la información y un director de la experiencia de lectura. Su trabajo consiste en tomar un cuerpo de texto e imágenes y transformarlo en un viaje coherente, jerárquico y atractivo para el lector. Cada decisión, desde el margen de la página hasta el espacio entre letras, tiene un propósito comunicativo.</p>
+                        </div>
+                        <div data-aos="fade-left">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111827/ffffff?text=Equipo+Creativo'" alt="Equipo de diseñadores revisando pruebas de impresión" class="rounded-lg shadow-xl">
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 md:order-1" data-aos="fade-right">
+                            <h3 class="font-serif text-3xl font-semibold mb-4">Legado Histórico: El Estilo Suizo</h3>
+                            <p class="text-medium">El diseño editorial moderno está profundamente influenciado por el Estilo Tipográfico Internacional (o Estilo Suizo) de los años 50. Sus principios —limpieza, legibilidad, objetividad y el uso de retículas modulares y tipografía sans-serif como Akzidenz-Grotesk (precursora de Helvetica)— son la base de gran parte del diseño gráfico contemporáneo. Estudiar a maestros como Josef Müller-Brockmann es fundamental.</p>
+                        </div>
+                        <div class="order-1 md:order-2" data-aos="fade-left">
+                            <img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=1974&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e5e7eb/111827?text=Estilo+Suizo'" alt="Composición abstracta inspirada en el Estilo Suizo" class="rounded-lg shadow-xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== MÓDULO 1: LA TRÍADA EDITORIAL ========== -->
+        <section id="fundamentals" class="py-20 sm:py-24 bg-white border-y border-light">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 data-aos="fade-up" class="text-4xl font-bold tracking-tight font-serif">La Tríada Editorial</h2>
+                    <p data-aos="fade-up" data-aos-delay="100" class="mt-3 text-lg text-medium max-w-3xl mx-auto">Todo gran diseño editorial se sostiene sobre tres pilares interconectados: la Retícula, la Tipografía y la Composición.</p>
+                </div>
+                <div class="space-y-20">
+                    <!-- Sub-módulo: La Retícula -->
+                    <div>
+                        <h3 class="font-serif text-3xl font-semibold mb-8 text-center" data-aos="fade-up">1. La Retícula: El Esqueleto Invisible</h3>
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div data-aos="fade-right"><img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e5e7eb/111827?text=Retícula+en+Pantalla'" alt="Diseñador trabajando con una retícula en pantalla" class="rounded-lg shadow-xl"></div>
+                            <div data-aos="fade-left" class="space-y-4">
+                                <p class="text-medium">La retícula es la estructura que aporta orden y coherencia. Un concepto clave es la **retícula de línea base (baseline grid)**, una red de líneas horizontales espaciadas uniformemente que asegura que todo el texto se alinee perfectamente, creando un ritmo vertical impecable.</p>
+                                <div class="bg-light p-4 rounded-lg border border-light"><h4 class="font-semibold">Romper la Retícula</h4><p class="text-sm text-medium mt-1">Solo se puede romper la retícula de forma efectiva una vez que se la domina. Hacerlo intencionadamente puede crear tensión, énfasis y dinamismo.</p></div>
+                            </div>
+                        </div>
+                        <div class="bg-light mt-12 p-8 rounded-lg border border-light" data-aos="fade-up">
+                            <h4 class="font-semibold text-xl mb-3">Tarea Práctica: Deconstrucción de Retículas</h4>
+                            <p class="text-medium">Toma tu revista o libro de diseño favorito. Elige una doble página que te guste y, con un lápiz y una regla sobre un papel de calco (o digitalmente), intenta dibujar las líneas de la retícula que el diseñador utilizó. Identifica las columnas, los módulos, los márgenes y, si es posible, la línea base.</p>
+                        </div>
+                    </div>
+                    <!-- Sub-módulo: Tipografía -->
+                    <div>
+                        <h3 class="font-serif text-3xl font-semibold mb-8 text-center" data-aos="fade-up">2. Tipografía: La Voz y la Textura</h3>
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div class="order-2 md:order-1 space-y-4" data-aos="fade-right">
+                                <p class="text-medium">La tipografía es el lenguaje corporal de las palabras. Se divide en **Macro-tipografía** (la estructura general: escala, pairing, jerarquía) y **Micro-tipografía** (los detalles finos: kerning, tracking, leading, y la elección de numerales o ligaduras). Dominar ambos es esencial.</p>
+                                <div class="bg-light p-4 rounded-lg border border-light"><h4 class="font-semibold">Pairing de Fuentes</h4><p class="text-sm text-medium mt-1">Combina una Serif para títulos con una Sans-serif para cuerpo de texto para un contraste clásico y legible.</p></div>
+                            </div>
+                            <div class="order-1 md:order-2" data-aos="fade-left"><img src="https://images.unsplash.com/photo-1604187351543-037c2c984852?q=80&w=1974&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111827/ffffff?text=Letra+Metálica'" alt="Primer plano de una letra de imprenta metálica" class="rounded-lg shadow-xl"></div>
+                        </div>
+                        <div class="bg-light mt-12 p-8 rounded-lg border border-light" data-aos="fade-up">
+                            <h4 class="font-semibold text-xl mb-3">Tarea Práctica: Crea una Jerarquía Tipográfica</h4>
+                            <p class="text-medium">Elige un artículo online. Usando solo una familia tipográfica (ej. Inter), define los tamaños, pesos (Regular, Bold) y colores para 5 niveles: Título Principal, Subtítulo, Cuerpo de texto, Cita destacada y Pie de foto. El objetivo es que la jerarquía sea evidente sin necesidad de leer.</p>
+                        </div>
+                    </div>
+                    <!-- Sub-módulo: Composición -->
+                    <div>
+                        <h3 class="font-serif text-3xl font-semibold mb-8 text-center" data-aos="fade-up">3. Composición: El Arte de la Disposición</h3>
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div data-aos="fade-right"><img src="https://images.unsplash.com/photo-1604079628040-94301bb21b91?q=80&w=1974&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e5e7eb/111827?text=Composición+Abstracta'" alt="Composición abstracta de formas geométricas" class="rounded-lg shadow-xl"></div>
+                            <div class="space-y-4" data-aos="fade-left">
+                                <p class="text-medium">La composición es la disposición intencionada de los elementos en la página para guiar el ojo del lector y crear impacto. Se basa en principios como el **balance** (simétrico o asimétrico), el **contraste** (de tamaño, color o forma), el **ritmo** y el uso del **espacio en blanco** como un elemento activo de diseño.</p>
+                                <div class="bg-light p-4 rounded-lg border border-light"><h4 class="font-semibold">Jerarquía Visual</h4><p class="text-sm text-medium mt-1">Asegúrate de que el elemento más importante sea el que más llame la atención, y guía al lector a través de los elementos secundarios en un orden lógico.</p></div>
+                            </div>
+                        </div>
+                        <div class="bg-light mt-12 p-8 rounded-lg border border-light" data-aos="fade-up">
+                            <h4 class="font-semibold text-xl mb-3">Tarea Práctica: Análisis de Composición</h4>
+                            <p class="text-medium">Encuentra una portada de revista que consideres excepcional. Analízala: ¿Dónde está el punto focal principal? ¿Cómo guía tu ojo a través de la página? ¿Es una composición simétrica o asimétrica? ¿Cómo utiliza el espacio en blanco?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== MÓDULO 3: EL PROCESO EDITORIAL PROFESIONAL ========== -->
+        <section id="process" class="py-20 sm:py-24 bg-light border-y border-light">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16"><h2 data-aos="fade-up" class="text-4xl font-bold tracking-tight font-serif">El Flujo de Trabajo Editorial</h2><p data-aos="fade-up" data-aos-delay="100" class="mt-3 text-lg text-medium max-w-2xl mx-auto">Desde el manuscrito hasta la imprenta, un proceso metódico garantiza resultados excepcionales.</p></div>
+                <div class="max-w-3xl mx-auto">
+                    <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/1200x600/111827/ffffff?text=Escritorio+de+Diseñador'" alt="Escritorio de un diseñador con bocetos y un ordenador" class="rounded-lg shadow-xl mb-12" data-aos="fade-up">
+                </div>
+                <div class="relative"><div class="absolute left-4 md:left-1/2 w-0.5 h-full bg-light -translate-x-1/2" aria-hidden="true"></div>
+                    <div class="relative flex items-start mb-16" data-aos="fade-right"><div class="flex-shrink-0 w-8 h-8 rounded-full bg-dark text-light flex items-center justify-center ring-8 ring-light z-10">1</div><div class="ml-6 md:ml-0 md:w-1/2 md:pr-12"><h3 class="text-2xl font-semibold font-serif">Conceptualización y Briefing</h3><p class="text-medium mt-2">Entender el contenido, el público y los objetivos de la publicación. Se define el tono, el formato y la dirección creativa general.</p></div></div>
+                    <div class="relative flex items-start justify-end mb-16" data-aos="fade-left"><div class="hidden md:block md:w-1/2 md:pl-12"><h3 class="text-2xl font-semibold font-serif">Estructura y Bocetaje</h3><p class="text-medium mt-2">Se define la retícula maestra y se crean "wireframes" o bocetos de baja fidelidad de las páginas clave para establecer el flujo y la disposición del contenido.</p></div><div class="flex-shrink-0 w-8 h-8 rounded-full bg-dark text-light flex items-center justify-center ring-8 ring-light z-10">2</div><div class="ml-6 md:hidden"><h3 class="text-2xl font-semibold font-serif">Estructura y Bocetaje</h3><p class="text-medium mt-2">Se define la retícula maestra y se crean bocetos de baja fidelidad de las páginas clave.</p></div></div>
+                    <div class="relative flex items-start mb-16" data-aos="fade-right"><div class="flex-shrink-0 w-8 h-8 rounded-full bg-dark text-light flex items-center justify-center ring-8 ring-light z-10">3</div><div class="ml-6 md:ml-0 md:w-1/2 md:pr-12"><h3 class="text-2xl font-semibold font-serif">Diseño y Refinamiento</h3><p class="text-medium mt-2">La fase de ejecución. Se aplica la tipografía, el color y las imágenes sobre la retícula, maquetando todas las páginas y refinando cada detalle de la composición.</p></div></div>
+                    <div class="relative flex items-start justify-end" data-aos="fade-left"><div class="hidden md:block md:w-1/2 md:pl-12"><h3 class="text-2xl font-semibold font-serif">Arte Final y Producción</h3><p class="text-medium mt-2">Se preparan los archivos finales para la imprenta (o para formato digital), revisando resoluciones (300 DPI), perfiles de color (CMYK), sangrados (3-5mm) y marcas de corte.</p></div><div class="flex-shrink-0 w-8 h-8 rounded-full bg-dark text-light flex items-center justify-center ring-8 ring-light z-10">4</div><div class="ml-6 md:hidden"><h3 class="text-2xl font-semibold font-serif">Arte Final y Producción</h3><p class="text-medium mt-2">Se preparan los archivos finales para la imprenta o para formato digital.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== MÓDULO 4: LABORATORIO INTERACTIVO ========== -->
+        <section id="practice" class="py-20 sm:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16"><h2 data-aos="fade-up" class="text-4xl font-bold tracking-tight font-serif">Laboratorio Editorial</h2><p data-aos="fade-up" data-aos-delay="100" class="mt-3 text-lg text-medium max-w-2xl mx-auto">Pon a prueba tu ojo de diseñador y tu conocimiento técnico.</p></div>
+                <div class="space-y-16 max-w-4xl mx-auto">
+                    <!-- Ejercicio 1: Identificación de Retícula -->
+                    <div class="bg-light p-8 sm:p-12 rounded-xl border border-light" data-aos="fade-up">
+                        <h3 class="font-serif text-2xl font-bold mb-2">Identificación de Retícula</h3>
+                        <p class="text-medium mb-8">Observa la siguiente maquetación de una revista. ¿Qué tipo de retícula es la base principal de su diseño?</p>
+                        <div class="flex justify-center mb-6"><img src="https://images.unsplash.com/photo-1516642894239-4b98c4b7861b?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e5e7eb/111827?text=Maquetación+de+Revista'" alt="Maquetación de una revista con varias columnas" class="rounded-lg shadow-md h-64 object-cover"></div>
+                        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4" id="grid-choices">
+                            <button class="lab-btn bg-white border border-gray-300 py-2 px-4 rounded-md hover:bg-dark hover:text-light transition-colors" onclick="checkGrid(false, this)">Manuscrito</button>
+                            <button class="lab-btn bg-white border border-gray-300 py-2 px-4 rounded-md hover:bg-dark hover:text-light transition-colors" onclick="checkGrid(true, this)">Columnas</button>
+                            <button class="lab-btn bg-white border border-gray-300 py-2 px-4 rounded-md hover:bg-dark hover:text-light transition-colors" onclick="checkGrid(false, this)">Jerárquica</button>
+                            <button class="lab-btn bg-white border border-gray-300 py-2 px-4 rounded-md hover:bg-dark hover:text-light transition-colors" onclick="checkGrid(false, this)">Modular</button>
+                        </div>
+                        <p id="grid-result" class="mt-4 font-medium text-center h-6"></p>
+                    </div>
+
+                    <!-- Ejercicio 2: Pairing de Tipografías -->
+                    <div class="bg-light p-8 sm:p-12 rounded-xl border border-light" data-aos="fade-up">
+                        <h3 class="font-serif text-2xl font-bold mb-2">Pairing de Tipografías</h3>
+                        <p class="text-medium mb-8">Para un libro de arte moderno y minimalista, ¿qué combinación de tipografías (pairing) sería la más adecuada para títulos y cuerpo de texto?</p>
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6" id="typo-choices">
+                            <button class="lab-btn text-left bg-white border border-gray-300 p-4 rounded-md hover:bg-dark hover:text-light transition-colors" onclick="checkTypo(false, this)"><h4 class="font-serif text-2xl text-dark" style="font-family: 'Comic Sans MS', cursive;">Título Divertido</h4><p class="text-sm mt-1 text-medium">Cuerpo de texto en Impact.</p></button>
+                            <button class="lab-btn text-left bg-white border border-gray-300 p-4 rounded-md hover:bg-dark hover:text-light transition-colors" onclick="checkTypo(true, this)"><h4 class="font-sans text-2xl font-bold text-dark" style="font-family: 'Helvetica', sans-serif;">Título Helvética</h4><p class="text-sm mt-1 text-medium" style="font-family: 'Garamond', serif;">Cuerpo de texto en Garamond.</p></button>
+                        </div>
+                        <p id="typo-result" class="mt-4 font-medium text-center h-6"></p>
+                    </div>
+
+                    <!-- Ejercicio 3: Análisis de Composición -->
+                    <div class="bg-light p-8 sm:p-12 rounded-xl border border-light" data-aos="fade-up">
+                        <h3 class="font-serif text-2xl font-bold mb-2">Análisis de Composición</h3>
+                        <p class="text-medium mb-8">Esta composición utiliza un principio clave para crear impacto y dirigir la mirada. ¿Cuál es?</p>
+                        <div class="flex justify-center mb-6"><img src="https://images.unsplash.com/photo-1512428209355-e83c23a0a1dd?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e5e7eb/111827?text=Espacio+Negativo'" alt="Composición con mucho espacio en blanco" class="rounded-lg shadow-md h-64 object-cover"></div>
+                        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4" id="comp-choices">
+                            <button class="lab-btn bg-white border border-gray-300 py-2 px-4 rounded-md hover:bg-dark hover:text-light transition-colors" onclick="checkComp(false, this)">Simetría</button>
+                            <button class="lab-btn bg-white border border-gray-300 py-2 px-4 rounded-md hover:bg-dark hover:text-light transition-colors" onclick="checkComp(false, this)">Repetición</button>
+                            <button class="lab-btn bg-white border border-gray-300 py-2 px-4 rounded-md hover:bg-dark hover:text-light transition-colors" onclick="checkComp(true, this)">Espacio Negativo</button>
+                            <button class="lab-btn bg-white border border-gray-300 py-2 px-4 rounded-md hover:bg-dark hover:text-light transition-colors" onclick="checkComp(false, this)">Proximidad</button>
+                        </div>
+                        <p id="comp-result" class="mt-4 font-medium text-center h-6"></p>
+                    </div>
+
+                    <!-- Ejercicio 4: Corrección de Microtipografía -->
+                    <div class="bg-light p-8 sm:p-12 rounded-xl border border-light" data-aos="fade-up">
+                        <h3 class="font-serif text-2xl font-bold mb-2">Corrección de Microtipografía</h3>
+                        <p class="text-medium mb-8">En el siguiente párrafo hay dos errores tipográficos comunes: una "viuda" (una palabra sola al final) y un "río" (un espacio en blanco que atraviesa el texto). Haz clic en ellos para identificarlos.</p>
+                        <div class="bg-white p-6 rounded-lg border border-light">
+                            <p class="text-medium leading-relaxed micro-text text-dark" id="micro-text-exercise">
+                                El diseño editorial es una disciplina que combina arte y técnica. Requiere una profunda comprensión de la jerarquía visual y el ritmo. Un buen diseñador sabe que cada detalle cuenta, desde el espacio entre las letras hasta el margen de la página. A veces, los espacios entre palabras crean "ríos" <span class="incorrect-micro" onclick="checkMicro(this, 'rio')">blancos</span> que distraen la lectura. Es crucial evitar que una sola palabra quede aislada al final de un párrafo, un error conocido como <span class="incorrect-micro" onclick="checkMicro(this, 'viuda')">viuda.</span>
+                            </p>
+                        </div>
+                        <p id="micro-result" class="mt-4 font-medium text-center h-6"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== GALERÍA DE INSPIRACIÓN ========== -->
+        <section id="inspiration" class="py-20 sm:py-24 bg-light border-t border-light">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 data-aos="fade-up" class="text-4xl font-bold tracking-tight font-serif">Galería de Inspiración</h2>
+                    <p data-aos="fade-up" data-aos-delay="100" class="mt-3 text-lg text-medium max-w-2xl mx-auto">Ejemplos de diseño editorial excepcional que demuestran el poder de la estructura y la creatividad.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div data-aos="fade-up"><img src="https://images.unsplash.com/photo-1579966436476-655d81f2887b?q=80&w=1968&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x800/111827/ffffff?text=Portada+Audaz'" class="rounded-lg shadow-xl w-full h-96 object-cover" alt="Portada de libro con diseño tipográfico audaz"></div>
+                    <div data-aos="fade-up" data-aos-delay="100"><img src="https://images.unsplash.com/photo-1504870199992-c8d095a439ad?q=80&w=1974&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x800/e5e7eb/111827?text=Doble+Página'" class="rounded-lg shadow-xl w-full h-96 object-cover" alt="Doble página de una revista con una composición fotográfica impactante"></div>
+                    <div data-aos="fade-up" data-aos-delay="200"><img src="https://images.unsplash.com/photo-1609709295948-17d5a926eda5?q=80&w=1974&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x800/111827/ffffff?text=Retícula+Compleja'" class="rounded-lg shadow-xl w-full h-96 object-cover" alt="Detalle de una maquetación con una retícula modular compleja"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-light border-t border-light"><div class="container mx-auto px-6 py-12 text-center"><p class="font-serif text-lg font-semibold text-dark">Editorial Lab</p><p class="mt-2 text-sm text-medium">&copy; 2025. Diseñado para los arquitectos de la página.</p></div></footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({ duration: 700, once: true, offset: 50 });
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main > section[id]');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 80) { current = section.getAttribute('id'); }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) { link.classList.add('active'); }
+                });
+            });
+        });
+
+        function disableButtons(containerId) {
+            document.querySelectorAll(`#${containerId} .lab-btn`).forEach(b => {
+                b.disabled = true;
+                b.classList.remove('hover:bg-dark', 'hover:text-light');
+            });
+        }
+
+        function checkGrid(isCorrect, btn) {
+            disableButtons('grid-choices');
+            const resultEl = document.getElementById('grid-result');
+            if (isCorrect) {
+                btn.classList.add('correct');
+                resultEl.textContent = '¡Correcto! La retícula de columnas es ideal para organizar texto e imágenes en revistas.';
+                resultEl.className = 'mt-4 font-medium text-center h-6 text-green-600';
+            } else {
+                btn.classList.add('incorrect');
+                resultEl.textContent = 'No exactamente. Observa cómo el contenido se alinea en bloques verticales.';
+                resultEl.className = 'mt-4 font-medium text-center h-6 text-red-600';
+            }
+        }
+
+        function checkTypo(isCorrect, btn) {
+            disableButtons('typo-choices');
+            const resultEl = document.getElementById('typo-result');
+            if (isCorrect) {
+                btn.classList.add('correct');
+                resultEl.textContent = '¡Excelente elección! Combinar una Sans-serif moderna con una Serif clásica crea un contraste sofisticado.';
+                resultEl.className = 'mt-4 font-medium text-center h-6 text-green-600';
+            } else {
+                btn.classList.add('incorrect');
+                resultEl.textContent = 'Esa combinación es poco profesional y no encaja con un libro de arte minimalista.';
+                resultEl.className = 'mt-4 font-medium text-center h-6 text-red-600';
+            }
+        }
+
+        function checkComp(isCorrect, btn) {
+            disableButtons('comp-choices');
+            const resultEl = document.getElementById('comp-result');
+            if (isCorrect) {
+                btn.classList.add('correct');
+                resultEl.textContent = '¡Exacto! El amplio espacio negativo (o en blanco) crea un punto focal claro y una sensación de lujo.';
+                resultEl.className = 'mt-4 font-medium text-center h-6 text-green-600';
+            } else {
+                btn.classList.add('incorrect');
+                resultEl.textContent = 'No es el principio principal. Fíjate en el uso del vacío como elemento de diseño.';
+                resultEl.className = 'mt-4 font-medium text-center h-6 text-red-600';
+            }
+        }
+
+        let microErrorsFound = 0;
+        function checkMicro(el, type) {
+            el.style.backgroundColor = 'rgba(22, 163, 74, 0.3)';
+            el.style.pointerEvents = 'none';
+            microErrorsFound++;
+            const resultEl = document.getElementById('micro-result');
+            if (microErrorsFound === 2) {
+                resultEl.textContent = '¡Perfecto! Has identificado ambos errores.';
+                resultEl.className = 'mt-4 font-medium text-center h-6 text-green-600';
+            } else {
+                resultEl.textContent = '¡Bien! Has encontrado uno. Busca el otro.';
+                 resultEl.className = 'mt-4 font-medium text-center h-6 text-blue-600';
+            }
+        }
+    </script>
+</body>
+</html>
